@@ -1,66 +1,53 @@
-This project was bootstrapped with
-[Bottender](https://github.com/Yoctol/bottender) init script.
+本專案基於 [bottender](https://bottender.js.org/) 框架進行實作
 
-## Sending Feedback
+## 目的
 
-Always feel free to open an issue to
-[Bottender](https://github.com/Yoctol/bottender/issues) repository.
+希望可以做一款適用於所有遊戲的聊天機器人，並且提供高度客製化來讓使用者可以自行設定自己的聊天機器人。
 
-## Configuration
+## 事前準備
 
-### The `bottender.config.js` File
+- [Git](https://git-scm.com/)
+- [Line 機器人申請](https://manager.line.biz/)，記下 Access Token & Client Secret
+- [node.js](https://nodejs.org/)
 
-Bottender configuration file. You can use this file to provide settings for the session store and channels.
+## 安裝順序
 
-### The `.env` File
+1. clone 本專案
 
-Bottender utilizes the [dotenv](https://www.npmjs.com/package/dotenv) package to load your environment variables when developing your app.
-
-To make the bot work, you must put required environment variables into your `.env` file.
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm run dev`
-
-Runs the app in development mode.<br>
-The bot will automatically reload if you make changes to the code.<br>
-By default, server runs on [http://localhost:5000](http://localhost:5000) and ngrok runs on [http://localhost:4040](http://localhost:4040).
-
-To run in [Console Mode](https://bottender.js.org/docs/en/the-basics-console-mode), provide the `--console` option:
-
-```sh
-npm run dev -- --console
-yarn dev --console
+```bash
+git clone https://github.com/hanshino/hermiller
 ```
 
-### `npm run build`
+2. cd 到本專案
 
-Build the app from TypeScript to JavaScript for production usage.
-
-### `npm start`
-
-Runs the app in production mode.<br>
-By default, server runs on [http://localhost:5000](http://localhost:5000).
-
-To run in [Console Mode](https://bottender.js.org/docs/en/the-basics-console-mode), provide the `--console` option:
-
-```sh
-npm start -- --console
-yarn start --console
+```bash
+cd hermiller
 ```
 
-### `npm run lint`
+3. 套件安裝
 
-Runs the linter rules using [Eslint](https://eslint.org/).
+如果你是使用 `npm`
 
-### `npm test`
+```bash
+npm install
+```
 
-Runs the test cases using [Jest](https://jestjs.io/).
+如果你是使用 `yarn`
 
-## Learn More
+```bash
+yarn install
+```
 
-To learn Bottender, check out the [Bottender documentation](https://bottender.js.org/docs/en/getting-started).
+4. 環境變數設置
 
-For more examples, see [Bottender examples](https://github.com/Yoctol/bottender/tree/master/examples).
+```bash
+cp .env.example .env
+```
+
+填上你的 Access Token & Client Secret
+
+5. 啟動服務
+
+```bash
+npm start
+```
